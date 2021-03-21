@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+}
+
+
+/*---------------------------------
+Typography
+---------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+/* 10px	0.625rem */
+
+.navbar .navbar-brand {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.navbar .navbar-nav .nav-link {
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 0;
+    padding: 0;
+    text-transform: uppercase;
+    transition: all-ease-in 0.4s;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    background: transparent;
+}
+
+.navbar .navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: transparent;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover::after {
+    width: 100%;
+    background: #0275d8;
+    color: #0275d8;
+
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.custom-button{
+    margin: 32px 0 0 0;
+    padding: 0;
+}
+
+.custom-button a{
+    color: red;
+    font-weight: normal;
+    line-height: 45px;
+    perspective: 1000px;
+}
+
+.custom-button a span{
+    color: lightgray;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: .6px;
+    padding: 2px 27px;
+    background: #0275d8;
+    border-radius: 1px;
+    transition: transform 0.3s;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+}
+
+.custom-button a span::before{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    background: #000;
+    border-radius: 1px;
+    padding: 2px 27px;
+    transition: background 0.3s;
+    transform: rotateX(-90deg);
+    content: attr(data-hover);
+    transform-origin: 50% 0;
+}
+
+.custom-button a:hover span,
+.custom-button a:focus span{
+    transform: rotateX(90deg) translateY(-22px);
+}
+
+
+.about h2{
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.about h4{
+    font-weight: 300;
+}
+
+.project .project-item{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+}
+.project .project-item .project-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: all ease-in-out 0.4s;
+}
+
+.project .project-item .project-overlay .project-info{
+    padding: 5em 0;
+}
+
+.project-info h1{
+    color: #fff;
+    margin: 0;
+}
+
+
+
+.project-info h3{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+.project .project-item:hover .project-overlay{
+    opacity: 1;
+}
+
+.team h1, .team h3{
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.team h4{
+    font-weight: 300;
+    font-size: 35px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+
+
+
+
+@media only screen and (max-width: 1550px) {
+    .home  {
+        flex-direction: column;
+
+    }
+}
+@media only screen and (max-width:   992px) {
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+
